@@ -1,0 +1,13 @@
+/* partials layout.ejs styling applied for all pages */
+
+main {
+  padding: 100px 20px 0px;
+}
+
+table {
+  text-align: center;
+}
+
+body {
+  font-family: math;
+}
