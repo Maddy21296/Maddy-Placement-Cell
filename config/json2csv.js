@@ -4,16 +4,16 @@ const Json2csvParser = require("json2csv").parse;
 async function convertJson2CSV(data) {
   return await ConvertToCSV(JSON.stringify(data), {
     fields: [
-      "Batch",
-      "Name",
-      "Email-Id",
-      "Mobile No.",
-      "College Name",
-      "Placement Status",
-      "DSA_marks",
-      "Web_Dev marks",
-      "React marks",
-      "Interview Status",
+      "batch",
+      "name",
+      "email",
+      "mobile",
+      "college",
+      "placement",
+      "dsa_marks",
+      "web_dev",
+      "react",
+      "interview",
     ],
     unwind: "interview",
   });

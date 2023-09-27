@@ -46,7 +46,7 @@ app.set("layout extractStyles", true);
 app.use(
   session({
     name: "Placement-Cell",
-    secret: process.env.ASSETS_PATH,
+    secret: process.env.SESSION_SECRET,
     saveUninitialized: false,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24,
@@ -54,7 +54,7 @@ app.use(
     resave: false,
     store: mongoStore.create(
       {
-        mongoUrl: 'mongodb://127.0.0.1:27017/test-app',
+        mongoUrl: `mongodb://127.0.0.1:27017/${process.env.DB}`,
       },
       function (err) {
         console.log(err || "connect-mongodb setup ok");
