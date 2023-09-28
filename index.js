@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dotenv.config({ path: './config/.env' });
+dotenv.config({ path: 'config.env' });
 
 //initilizing express and calling all the functionalities of express
 const express = require("express");
@@ -54,7 +54,7 @@ app.use(
     resave: false,
     store: mongoStore.create(
       {
-        mongoUrl: `mongodb+srv://mohitsainims260:Myname@cluster0.pfoxntp.mongodb.net/?retryWrites=true&w=majority`,
+        mongoUrl: process.env.DB,
       },
       function (err) {
         console.log(err || "connect-mongodb setup ok");

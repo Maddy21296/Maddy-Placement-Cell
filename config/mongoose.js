@@ -2,9 +2,9 @@
 const mongoose = require("mongoose");
 const dotenv = require('dotenv');
 
-dotenv.config({ path: './config/.env' });
+dotenv.config({ path: 'config.env' });
 
-mongoose.connect(`mongodb+srv://mohitsainims260:Myname@cluster0.pfoxntp.mongodb.net/?retryWrites=true&w=majority`);
+mongoose.connect(process.env.DB);
 
 const db = mongoose.connection;
 
