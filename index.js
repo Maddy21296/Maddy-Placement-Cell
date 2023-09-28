@@ -54,7 +54,7 @@ app.use(
     resave: false,
     store: mongoStore.create(
       {
-        mongoUrl: `mongodb://127.0.0.1:27017/${process.env.DB}`,
+        mongoUrl: `mongodb+srv://mohitsainims260:Myname@cluster0.pfoxntp.mongodb.net/?retryWrites=true&w=majority`,
       },
       function (err) {
         console.log(err || "connect-mongodb setup ok");

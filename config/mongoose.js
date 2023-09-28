@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/.env' });
 
-mongoose.connect(`mongodb://127.0.0.1:27017/${process.env.DB}`);
+mongoose.connect(`mongodb+srv://mohitsainims260:Myname@cluster0.pfoxntp.mongodb.net/?retryWrites=true&w=majority`);
 
 const db = mongoose.connection;
 
